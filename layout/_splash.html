@@ -1,0 +1,30 @@
+{% extends "skeleton/_base.html" %}
+
+{% block title %}{{ site.name }}{% endblock %}
+
+{% block content %}
+    <div class="container">
+    <div class="hero-unit">
+        {% filter typogrify %}
+            <h1>
+                Hello,
+                I'm
+                <a href="{{ site.full_url }}" class="fn url">Yuri<span class="last-name"> Karabatov</span></a>.
+            </h1>
+
+            <p>
+                I'm an
+                <span class="role">online marketer, translator &amp; programmer</span>
+                from
+                <span class="adr"><span class="city">Moscow</span>, <span class="country">Russia</span></span>.
+            </p>
+
+            <p>
+                If you want to get in touch with me,
+                <a class="email" href="mailto:yuri@lessselling.com">email</a>
+                is best.
+            </p>
+        {% endfilter %}
+    </div>
+    </div>
+{% endblock %}

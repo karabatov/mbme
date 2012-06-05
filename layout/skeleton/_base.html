@@ -1,0 +1,77 @@
+{% extends "skeleton/_root.html" %}
+{% block all %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>{% block title %}{% block extra_title %}{% endblock %}{{ page.title|safe }} : {{ site.name }}{% endblock %}</title>
+
+        {% block feeds %}
+            <link href="http://microbusiness.me/feed"
+                  rel="alternate" title="{{ site.name }}"
+                  type="application/atom+xml" />
+        {% endblock %}
+
+        {% block css %}
+            <link href="/static/css/bootstrap.css" rel="stylesheet">
+            <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
+            <style type="text/css">
+                body {
+                    padding-top: 60px;
+                    padding-bottom: 40px;
+                }
+            </style>
+            {% block extra_css %}{% endblock %}
+        {% endblock %}
+
+        {% block js %}
+        <!-- HTML5 shim for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+            {% block extra_js %}{% endblock %}
+        {% endblock %}
+
+        {% block icons %}
+            <link rel="shortcut icon" href="/static/img/favicon.ico">
+        {% endblock %}
+
+    </head>
+
+    <body>
+        <div class="navbar navbar-fixed-top" id="backtotop">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="http://microbusiness.me">MICRO BUSINESS ME</a>
+                    {% block nav %}
+                    <ul class="nav">
+                        <li><a href="http://microbusiness.me">Home</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a href="/combo">COMBO</a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            {% with page.node.ancestors|last as parent_node %}
+                {% with parent_node.url as parent_url %}
+                    {% block content %}{% endblock %}
+                {% endwith %}
+            {% endwith %}
+        
+            <hr>
+
+            <footer class="footer">
+                <p class="pull-right"><a href="#backtotop">Back to top</a></p>
+            </footer>
+        </div> <!-- /container -->
+    </body>
+</html>
+{% endblock %}

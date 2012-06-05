@@ -1,0 +1,4 @@
+fabric
+-e git://github.com/lakshmivyas/hyde.git#egg=hyde
+smartypants
+cherrypy
