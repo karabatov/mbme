@@ -1,0 +1,39 @@
+{% extends "_post.html" %}
+
+{% hyde
+    title: "Test Post 1"
+    snip: "Our culture is one of pain and suffering."
+    created: 2012-06-06 06:00:00
+%}
+
+{% block article %}
+I want to use my fifteen minutes of fame on The Listserve to rant about
+something that's close to my heart: the stability of the software I use.
+
+NOTE: This is written for people who create software.  If you don't do that you
+probably won't find this very interesting.  Sorry!  Maybe you could read Text
+from Dog if you haven't seen it already?  Either way, have a nice
+morning/afternoon/evening!
+
+The Situation
+-------------
+
+Every time I get a new computer, I go through the same song and dance:
+
+1. Look at what programs and packages I have installed on the old computer.
+2. Install these programs on the new computer.
+3. Copy over my configuration files from the old computer to the new one.
+4. Spend the rest of my day fixing all the things that broke because I'm using
+   a newer version of program X.
+
+Step 4 is always the most painful part of getting a new machine.  Always.
+
+Without fail I spend several hours tweaking configuration files, adjusting my
+workflow, and so on because I've upgraded to a new version of foo which doesn't
+support option X any more or requires library Y version N+1 now.
+
+Getting a new computer should be a *pleasant* experience!  The unboxing from the
+sleek packaging, that "new laptop" smell, the nostalgia of the default desktop
+image.  Why does this horrible step 4 have to exist and how can we get rid of
+it?
+{% endblock article %}

@@ -1,0 +1,70 @@
+{% extends "_post.html" %}
+
+{% hyde
+    title: "Test Post 2"
+    snip: "Our culture is two of pain and suffering."
+    created: 2012-06-06 08:00:00
+%}
+
+{% block article %}
+Sometimes software needs to get poked and prodded in the real world before it's
+fully baked, and until then requiring strict backwards compatibility will do
+more harm than good.
+
+By all means, backwards compatibility should be thrown to the wind in the first
+stage of a project's life.  At the beginning it needs to find its legs, like
+a baby gazelle on the Serengeti.  But at some point the project needs to get its
+balance, grow up, and start concerning itself with backwards compatibility.
+
+But when should that happen?
+
+A Solution
+----------
+
+I think there's a simple, intuitive way to mark the transition of a piece of
+software from "volatile" to "stable":
+
+**Version 1.0**
+
+Before version 1, software can change and evolve rapidly with no regards for
+breaking, but once that first number becomes "greater than or equal to 1" it's
+time to be a responsible member of the software community and start thinking
+about the real humans whose time gets wasted for every breaking change.
+
+This is the approach semantic versioning takes, and I think it's the right one.
+
+I know a lot of people dislike semantic versioning.  They hate how requires
+incrementing the major version number every time a breaking change is made.
+
+I consider it to be a *good* thing.
+
+You *should* pause and carefully consider making a change that will break
+people's current code.
+
+You *should* be ashamed if your project is at version 43.0.0 because you've made
+42 breaking changes.  That's 43 times you've disregarded your users' time!
+That's a bad thing!
+
+As programmers we need to start caring about the people we write software for.
+
+Before making a change that's going to cause other people pain, we should ask
+ourselves if it's really worth the cost.  Sometimes it is, but many times it's
+not, and we can wrap the change up so it doesn't hurt anyone.
+
+So please, before you make that backwards incompatible change, think of the
+other human beings who are going to smack their monitors when your software
+breaks.
+
+Further Reading
+---------------
+
+I'm certainly not the only person to notice this problem.  Many smarter people
+than me have talked about it.  If you want to read more you might want to look
+up some or all of the following (Google is your friend):
+
+* The Semantic Versioning spec (the specific numbering details don't matter as
+  much as the philosophy).
+* Anything Matt Mackall has written on the Mercurial mailing list (especially
+  the mails where he sounds especially grouchy).
+* Anything about "software rot" or "code rot".
+{% endblock article %}

@@ -47,13 +47,16 @@
                     <a class="brand" href="http://microbusiness.me">MICRO BUSINESS ME</a>
                     {% block nav %}
                     <ul class="nav">
-                        <li><a href="http://microbusiness.me">Home</a></li>
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="/services">Services</a></li>
+                        <li {% ifequal page.module site.module %} class="active" {% endifequal %}>
+                            <a href="{{site.listing_url}}">Home</a></li>
+                        <li {% ifequal page.module.name "blog" %} class="active" {% endifequal %}>
+                            <a href="/blog/">Blog</a></li>
+                        <li {% ifequal page.module.name "services" %} class="active" {% endifequal %}>
+                            <a href="/services/">Services</a></li>
+                        <li {% ifequal page.module.name "about" %} class="active" {% endifequal %}>
+                            <a href="/about/">About</a></li>
                         <li class="divider-vertical"></li>
-                        <li><a href="/combo">COMBO</a></li>
-                        <li class="divider-vertical"></li>
-                        <li><a href="/about">About</a></li>
+                        <li><a href="http://combo.microbusiness.me">COMBO</a></li>
                     </ul>
                     {% endblock %}
                 </div>

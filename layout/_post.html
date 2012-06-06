@@ -1,0 +1,30 @@
+{% extends "skeleton/_base.html" %}
+
+{% block content %}
+    <div id="leaf-title">
+        <h1><a href="{{ page.url }}">{{ page.title|safe|typogrify }}</a></h1>
+    </div>
+
+
+    <div id="leaf-stats" class="group">
+        <p>
+            Posted
+            <span class="timeago"
+                  title="{{ page.created|date:"Y-m-d" }}T{{ page.created|date:"H:i:s" }}">
+            </span>
+            on {{ page.created|date:"F j, Y" }}.
+        </p>
+    </div>
+
+    <div id="leaf-content" class="{% block article_class %}{% endblock %}">
+        {% filter typogrify %}
+            {% article %}
+                {% filter typogrify %}
+                    {% markdown toc def_list codehilite %}
+                        {% block article %}{% endblock %}
+                    {% endmarkdown %}
+                {% endfilter %}
+            {% endarticle %}
+        {% endfilter %}
+    </div>
+{% endblock %}
