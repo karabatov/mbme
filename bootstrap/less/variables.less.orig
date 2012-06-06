@@ -1,8 +1,8 @@
 // Variables.less
 // Variables to customize the look and feel of Bootstrap
-// Swatch: Simplex
-// Version: 2.0.3
 // -----------------------------------------------------
+
+
 
 // GLOBAL VALUES
 // --------------------------------------------------
@@ -11,7 +11,7 @@
 // Grays
 // -------------------------
 @black:                 #000;
-@grayDarker:            #2C2C2C;
+@grayDarker:            #222;
 @grayDark:              #333;
 @gray:                  #555;
 @grayLight:             #999;
@@ -21,25 +21,25 @@
 
 // Accent colors
 // -------------------------
-@blue:                  #15C;
-@blueDark:              #043755;
-@green:                 #3D9400;
-@red:                   #E32C3B;
-@yellow:                #FFCA27;
-@orange:                #FF6600;
-@pink:                  #ED2590;
-@purple:                #9B479F;
+@blue:                  #049cdb;
+@blueDark:              #0064cd;
+@green:                 #46a546;
+@red:                   #9d261d;
+@yellow:                #ffc40d;
+@orange:                #f89406;
+@pink:                  #c3325f;
+@purple:                #7a43b6;
 
 
 // Scaffolding
 // -------------------------
-@bodyBackground:        #EDEDED;
-@textColor:             @gray;
+@bodyBackground:        @white;
+@textColor:             @grayDark;
 
 
 // Links
 // -------------------------
-@linkColor:             #366DDC;
+@linkColor:             #08c;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
@@ -48,8 +48,6 @@
 @sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
-@import url(http://fonts.googleapis.com/css?family=Raleway:100);
-@brandFontFamily:       "Raleway", cursive;
 
 @baseFontSize:          13px;
 @baseFontFamily:        @sansFontFamily;
@@ -58,7 +56,7 @@
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:    bold;    // instead of browser default, bold
-@headingsColor:         @grayDark; // empty to use BS default, @textColor
+@headingsColor:         inherit; // empty to use BS default, @textColor
 
 
 // Tables
@@ -73,7 +71,7 @@
 // -------------------------
 @btnBackground:                     @white;
 @btnBackgroundHighlight:            darken(@white, 10%);
-@btnBorder:                         darken(@white, 20%);
+@btnBorder:                         #ccc;
 
 @btnPrimaryBackground:              @linkColor;
 @btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 15%);
@@ -98,7 +96,7 @@
 // -------------------------
 @inputBackground:               @white;
 @inputBorder:                   #ccc;
-@inputBorderRadius:             0;
+@inputBorderRadius:             3px;
 @inputDisabledBackground:       @grayLighter;
 @formActionsBackground:         #f5f5f5;
 
@@ -136,7 +134,7 @@
 
 // Input placeholder text color
 // -------------------------
-@placeholderText:         @gray;
+@placeholderText:         @grayLight;
 
 
 // Hr border color
@@ -147,12 +145,12 @@
 // Navbar
 // -------------------------
 @navbarHeight:                    40px;
-@navbarBackground:                #F3F3F3;
-@navbarBackgroundHighlight:       @navbarBackground;
+@navbarBackground:                @grayDarker;
+@navbarBackgroundHighlight:       @grayDark;
 
-@navbarText:                      @gray;
-@navbarLinkColor:                 @gray;
-@navbarLinkColorHover:            @grayDark;
+@navbarText:                      @grayLight;
+@navbarLinkColor:                 @grayLight;
+@navbarLinkColorHover:            @white;
 @navbarLinkColorActive:           @navbarLinkColorHover;
 @navbarLinkBackgroundHover:       transparent;
 @navbarLinkBackgroundActive:      @navbarBackground;
@@ -161,7 +159,7 @@
 @navbarSearchBackgroundFocus:     @white;
 @navbarSearchBorder:              darken(@navbarSearchBackground, 30%);
 @navbarSearchPlaceholderColor:    #ccc;
-@navbarBrandColor:                @headingsColor;
+@navbarBrandColor:                @navbarLinkColor;
 
 
 // Hero unit
@@ -173,19 +171,19 @@
 
 // Form states and alerts
 // -------------------------
-@warningText:             @orange;
+@warningText:             #c09853;
 @warningBackground:       #fcf8e3;
 @warningBorder:           darken(spin(@warningBackground, -10), 3%);
 
-@errorText:               @red;
+@errorText:               #b94a48;
 @errorBackground:         #f2dede;
 @errorBorder:             darken(spin(@errorBackground, -10), 3%);
 
-@successText:             @green;
+@successText:             #468847;
 @successBackground:       #dff0d8;
 @successBorder:           darken(spin(@successBackground, -10), 5%);
 
-@infoText:                @blue;
+@infoText:                #3a87ad;
 @infoBackground:          #d9edf7;
 @infoBorder:              darken(spin(@infoBackground, -10), 7%);
 
