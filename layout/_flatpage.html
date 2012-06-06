@@ -1,0 +1,11 @@
+{% extends "skeleton/_base.html" %}
+
+{% block content %}
+    <h1>{{ page.title|safe|typogrify }}</h1>
+    
+    {% filter typogrify %}
+        {% markdown toc def_list %}
+            {% block article %}{% endblock %}
+        {% endmarkdown %}
+    {% endfilter %}
+{% endblock %}

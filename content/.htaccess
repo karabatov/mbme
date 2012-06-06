@@ -118,3 +118,5 @@ AddCharset utf-8 .html .css .js .xml .json .rss
         RewriteRule ^.*$ %{REQUEST_FILENAME}.html
     {% endif %}
 </IfModule>
+
+ErrorDocument 404 /404.html
