@@ -19,7 +19,6 @@ def generate():
 
 def regen():
     clean()
-    bootstrap()
     generate()
 
 def serve():

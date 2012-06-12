@@ -6,8 +6,17 @@
 {% for list_page in node.pages %}
     {% ifnotequal list_page node.listing_page %}
         {% if not list_page.exclude %}
+            {% if forloop.counter0|divisibleby:"2" %}
+                <div class="row-fluid">
+            {% endif %}
             {% include "skeleton/_listingitem.html" %}
-        {%endif%}
+            {% if forloop.counter0 > 0 and not forloop.counter0|divisibleby:"2" %}
+                </div>
+            {% endif %}
+            {% if forloop.last and forloop.counter0|divisibleby:"2" %}
+                </div>
+            {% endif %}
+        {% endif %}
     {% endifnotequal %}
 {% endfor %}
 

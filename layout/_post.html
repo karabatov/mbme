@@ -1,6 +1,9 @@
 {% extends "skeleton/_base.html" %}
 
 {% block content %}
+<div class="row-fluid">
+<div class="span1"></div>
+<div class="span7">
     <div id="leaf-title">
         <h1><a href="{{ page.url }}">{{ page.title|safe|typogrify }}</a></h1>
     </div>
@@ -27,4 +30,7 @@
             {% endarticle %}
         {% endfilter %}
     </div>
+</div>
+<div class="span3"><p>Sidebar!</p></div>
+</div>
 {% endblock %}
