@@ -17,12 +17,6 @@
         {% block css %}
             <link href="/static/css/bootstrap.css" rel="stylesheet">
             <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
-            <style type="text/css">
-                body {
-                    padding-top: 60px;
-                    padding-bottom: 40px;
-                }
-            </style>
             {% block extra_css %}{% endblock %}
         {% endblock %}
 
@@ -41,7 +35,7 @@
     </head>
 
     <body>
-        <div class="navbar navbar-fixed-top" id="backtotop">
+        <div class="navbar">
             <div class="navbar-inner">
                 <div class="container">
                     <a class="brand" href="http://microbusiness.me">MICRO BUSINESS ME</a>
@@ -68,12 +62,8 @@
                     {% block content %}{% endblock %}
                 {% endwith %}
             {% endwith %}
-        
-            <hr />
 
-            <footer class="footer">
-                <p class="pull-right"><a href="#backtotop">Back to top</a></p>
-            </footer>
+            {% include "skeleton/_footer.html" %}
         </div> <!-- /container -->
     </body>
 </html>
