@@ -48,15 +48,18 @@
 @sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
-@import url(http://fonts.googleapis.com/css?family=Raleway:100);
+@import url("http://fonts.googleapis.com/css?family=Raleway:100");
 @brandFontFamily:       "Raleway", cursive;
+@import url("http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400italic,400");
+@sortsFontFamily:       "Sorts Mill Goudy", serif;
+@palatinoFontFamily:    Palatino, "Palatino Linotype", serif;
 
 @baseFontSize:          18px;
-@baseFontFamily:        @sansFontFamily;
+@baseFontFamily:        @palatinoFontFamily;
 @baseLineHeight:        24px;
 @altFontFamily:         @serifFontFamily;
 
-@headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
+@headingsFontFamily:    @sortsFontFamily; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:    bold;    // instead of browser default, bold
 @headingsColor:         @grayDark; // empty to use BS default, @textColor
 

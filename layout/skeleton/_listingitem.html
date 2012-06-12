@@ -1,8 +1,8 @@
-<div class="span6">
-    <a href="{{ list_page.url }}">
+<div class="span6" align="center">
+    <h2><a href="{{ list_page.url }}">
         {% with list_page.name_without_extension|remove_date_prefix|unslugify as default_title %}
             {{ list_page.title|default_if_none:default_title|safe|typogrify }}
         {%endwith%}
-    </a>
-    <span class="snip">{{ list_page.snip|safe|typogrify }}</span>
+    </a></h2>
+    <h4>{{ list_page.snip|safe|typogrify }}</h4>
 </div>
