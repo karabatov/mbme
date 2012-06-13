@@ -792,7 +792,7 @@ h5,
 h6 {
   margin: 0;
   font-family: "Sorts Mill Goudy", serif;
-  font-weight: bold;
+  font-weight: normal;
   color: #333333;
   text-rendering: optimizelegibility;
 }
