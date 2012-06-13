@@ -4,22 +4,17 @@
 <div class="row-fluid">
 <div class="span1"></div>
 <div class="span7">
-    <div id="leaf-title">
         <h1><a href="{{ page.url }}">{{ page.title|safe|typogrify }}</a></h1>
-    </div>
 
-
-    <div id="leaf-stats" class="group">
-        <p>
+        <h6>
             Posted
             <span class="timeago"
                   title="{{ page.created|date:"Y-m-d" }}T{{ page.created|date:"H:i:s" }}">
             </span>
             on {{ page.created|date:"F j, Y" }}.
-        </p>
-    </div>
+        </h6>
 
-    <div id="leaf-content" class="{% block article_class %}{% endblock %}">
+    <div id="article">
         {% filter typogrify %}
             {% article %}
                 {% filter typogrify %}
