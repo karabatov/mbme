@@ -4,15 +4,16 @@
 <div class="row-fluid">
 <div class="span1"></div>
 <div class="span7">
-        <h1><a href="{{ page.url }}">{{ page.title|safe|typogrify }}</a></h1>
-
-        <h6>
-            Posted
-            <span class="timeago"
-                  title="{{ page.created|date:"Y-m-d" }}T{{ page.created|date:"H:i:s" }}">
-            </span>
-            on {{ page.created|date:"F j, Y" }}.
-        </h6>
+    <h1><a href="{{ page.url }}">{{ page.title|safe|typogrify }}</a></h1>
+        
+    <div class="postedon">
+    <p>
+        Posted
+        <span class="timeago"
+              title="{{ page.created|date:"Y-m-d" }}T{{ page.created|date:"H:i:s" }}">
+        </span>
+        on {{ page.created|date:"F j, Y" }}.
+    </p></div>
 
     <div id="article">
         {% filter typogrify %}

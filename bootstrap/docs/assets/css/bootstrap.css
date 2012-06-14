@@ -9349,6 +9349,10 @@ footer.footer p {
   font-size: 11px;
 }
 
+.postedon p {
+  color: #999999;
+}
+
 .pull-right {
   float: right;
 }
