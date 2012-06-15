@@ -29,7 +29,7 @@ def reserve():
     serve()
 
 def smush():
-    local('smusher ./media/images')
+    local('smusher ./static/img')
 
 @hosts(PROD)
 def publish():
