@@ -100,7 +100,7 @@ FILTER = {
 
 YUI_COMPRESSOR = os.path.join(ROOT_PATH, 'yuicompressor-2.4.7.jar')
 HSS_PATH = None # if you don't want to use HSS
-LESS_CSS_PATH = '/Users/ykar/local/bin/lessc'
+LESS_CSS_PATH = '~/local/bin/lessc'
 THUMBNAIL_MAX_WIDTH = 1400000000
 THUMBNAIL_MAX_HEIGHT = 100
 THUMBNAIL_FILENAME_POSTFIX = '-thumb'
