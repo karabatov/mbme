@@ -6,15 +6,6 @@
 <div class="span7">
     <h1><a href="{{ page.url }}">{{ page.title|safe|typogrify }}</a></h1>
         
-    <div class="postedon">
-    <p>
-        Posted
-        <span class="timeago"
-              title="{{ page.created|date:"Y-m-d" }}T{{ page.created|date:"H:i:s" }}">
-        </span>
-        on {{ page.created|date:"F j, Y" }}.
-    </p></div>
-
     <div id="article">
         {% filter typogrify %}
             {% article %}
@@ -26,6 +17,14 @@
             {% endarticle %}
         {% endfilter %}
     </div>
+    <div class="postedon">
+    <p>
+        Posted
+        <span class="timeago"
+              title="{{ page.created|date:"Y-m-d" }}T{{ page.created|date:"H:i:s" }}">
+        </span>
+        on {{ page.created|date:"F j, Y" }}.
+    </p></div>
     <div id="hypercomments_widget"></div><script type="text/javascript">
         var _hcp = _hcp || {};
         _hcp.widget_id = 1536;
