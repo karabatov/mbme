@@ -16,7 +16,7 @@ BACKUP = False
 DEBUG = True
 
 SITE_ROOT = "/"
-SITE_WWW_URL = "http://microbusiness.me"
+SITE_WWW_URL = "http://old.microbusiness.me"
 SITE_NAME = "Micro Business Me"
 SITE_AUTHOR = "Yuri Karabatov"
 

@@ -3,7 +3,7 @@ import os
 import fabric.contrib.project as project
 
 PROD = 'gator1241.hostgator.com:2222'
-DEST_PATH = '/home/ykar/public_html/microbusiness.me'
+DEST_PATH = '/home/ykar/public_html/old.microbusiness.me'
 ROOT_PATH = os.path.abspath(os.path.dirname(__file__))
 DEPLOY_PATH = os.path.join(ROOT_PATH, 'deploy')
 
